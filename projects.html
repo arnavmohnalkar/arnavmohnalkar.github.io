@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Arnav Mohnalkar</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+      color: #111;
+      line-height: 1.7;
+    }
+    nav {
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 50px;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav a {
+      color: #111;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    nav a:hover { text-decoration: underline; }
+    nav .name {
+      font-weight: bold;
+      margin-right: auto;
+    }
+    /* Project nav */
+    .project-nav {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 1rem 1.25rem;
+      margin-bottom: 3rem;
+      font-size: 0.88rem;
+    }
+    .project-nav p {
+      margin: 0 0 0.5rem;
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .project-nav a {
+      display: block;
+      color: #111;
+      text-decoration: none;
+      padding: 0.2rem 0;
+    }
+    .project-nav a:hover { text-decoration: underline; }
+    .project-nav .divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 0.6rem 0;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 3.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
+    h3 { font-size: 1rem; margin-bottom: 0.2rem; margin-top: 0; }
+    p { margin: 0.6rem 0; }
+    a { color: #111; }
+    .muted { color: #666; font-size: 0.9rem; }
+    .project { margin-bottom: 3rem; }
+    .tags { font-size: 0.8rem; color: #888; margin-bottom: 0.75rem; }
+    hr { border: none; border-top: 1px solid #eee; margin: 3rem 0; }
+
+    /* PDF embed */
+    .pdf-embed {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ddd;
+      margin-top: 1rem;
+    }
+    .pdf-fallback {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .pdf-fallback a { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="name"><a href="index.html">Arnav Mohnalkar</a></span>
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="#professional">Work</a>
+  </nav>
+
+  <h1>Projects</h1>
+  <p class="muted">LMC 3403 assignments and professional work</p>
+
+  <!-- Jump nav -->
+  <div class="project-nav">
+    <p>Jump to</p>
+    <a href="#mp1">MP1 &mdash; Career Materials</a>
+    <a href="#mp2">MP2 &mdash; Crisis Report and Infographic</a>
+    <a href="#mp3">MP3 &mdash; Bloomberg Terminal Training</a>
+    <hr class="divider">
+    <a href="#professional">Professional Work</a>
+    <a href="#fraud">Fraud Detection Platform</a>
+    <a href="#snacktrack">SnackTrack Atlanta</a>
+  </div>
+
+  <h2>Major Projects</h2>
+
+  <!-- MP1 -->
+  <div class="project" id="mp1">
+    <h3>MP1 &mdash; Career Materials</h3>
+    <p class="tags">Resume &bull; Cover Letter</p>
+    <p>
+      This project required developing a professional resume and cover letter tailored to a specific employer. I applied to Intuit's data engineering team, aligning my language and examples with their emphasis on scale and impact. The most significant revision I made was shifting my resume bullets from task-based descriptions to outcome-driven statements, quantifying improvements in runtime and error reduction. The cover letter became more specific about why my background fit Intuit's particular needs rather than just summarizing my resume.
+    </p>
+    <iframe class="pdf-embed" src="resume.pdf"></iframe>
+    <div class="pdf-fallback">
+      Can't see the PDF? <a href="resume.pdf" target="_blank">Open resume in a new tab</a>
+    </div>
+    <iframe class="pdf-embed" src="cover-letter.pdf" style="margin-top:1rem;"></iframe>
+    <div class="pdf-fallback">
+      Can't see the PDF? <a href="cover-letter.pdf" target="_blank">Open cover letter in a new tab</a>
+    </div>
+  </div>
+
+  <!-- MP2 -->
+  <div class="project" id="mp2">
+    <h3>MP2 &mdash; Technical Crisis Report and Infographic</h3>
+    <p class="tags">Rhetorical Analysis &bull; Visual Communication</p>
+    <p>
+      I examined the use of AI in a military operation, analyzing how Anthropic, the U.S. Department of Defense, and media organizations each framed the event differently. My report examined the rhetorical strategies each party used, including selective disclosure, ethical framing, and strategic silence, to manage public perception. I then translated the report's findings into a visual infographic presenting a timeline of events, a stakeholder comparison, and a breakdown of framing strategies.
+    </p>
+    <iframe class="pdf-embed" src="crisis-report.pdf"></iframe>
+    <div class="pdf-fallback">
+      Can't see the PDF? <a href="crisis-report.pdf" target="_blank">Open report in a new tab</a>
+    </div>
+    <iframe class="pdf-embed" src="infographic.pdf" style="margin-top:1rem;"></iframe>
+    <div class="pdf-fallback">
+      Can't see the PDF? <a href="infographic.pdf" target="_blank">Open infographic in a new tab</a>
+    </div>
+  </div>
+
+  <!-- MP3 -->
+  <div class="project" id="mp3">
+    <h3>MP3 &mdash; Bloomberg Terminal Training Materials</h3>
+    <p class="tags">Instructional Design &bull; Notion</p>
+    <p>
+      I created training materials to help Georgia Tech students learn how to use the Bloomberg Terminal. I focused on accessibility and usability throughout, building the materials on Notion with step-by-step instructions, annotated screenshots, and a modular structure. The training covers core workflows relevant to students in finance and data-adjacent fields, written in plain language to reduce the learning curve. The modular format allows individual sections to be revised as Bloomberg's interface changes without a complete overhaul.
+    </p>
+    <div class="pdf-fallback">
+      This project is hosted on Notion. <a href="https://www.notion.so/Bloomberg-Terminal-Training-Georgia-Tech-343db3a5a85180508f32c4e665526b69" target="_blank">View the Bloomberg Terminal Training Guide</a>
+    </div>
+  </div>
+
+  <h2 id="professional">Professional Work</h2>
+
+  <!-- Fraud -->
+  <div class="project" id="fraud">
+    <h3>Fraud Detection Platform</h3>
+    <p class="tags">Python &bull; Scikit-learn &bull; Pandas &bull; SQL &bull; Flask/Django &bull; March 2025 &ndash; September 2025</p>
+    <p>
+      I built a full-stack AI-powered analytics platform for the Georgia Tech Student Government Association to detect anomalous fund disbursements across student organizations. I developed and deployed machine learning pipelines that modeled historical spending patterns and surfaced outliers and potential fraud signals in reimbursement data. The platform gave SGA leadership a data-driven tool to improve financial oversight. The system had to be not just accurate, but interpretable and actionable for administrators who are not data scientists, demonstrating that a tool's value depends on how clearly its outputs are communicated to the people using it.
+    </p>
+  </div>
+
+  <!-- SnackTrack -->
+  <div class="project" id="snacktrack">
+    <h3>SnackTrack Atlanta</h3>
+    <p class="tags">Django &bull; JavaScript &bull; Google Maps API &bull; October 2024 &ndash; November 2024</p>
+    <p>
+      SnackTrack Atlanta is a full-stack web application I built to help users discover nearby restaurants through live map integration and interactive search functionality. I developed both the back-end logic and a responsive front-end designed for seamless use across devices, integrating geolocation and dynamic search filters. Building SnackTrack pushed me to think about user experience as a form of communication: every design decision, from filter placement to map responsiveness, shapes how a user understands and interacts with the information being presented.
+    </p>
+  </div>
+
+  <hr>
+  <p class="muted">Arnav Mohnalkar &bull; Georgia Institute of Technology &bull; Spring 2026</p>
+
+</body>
+</html>
