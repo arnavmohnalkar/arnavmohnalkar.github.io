@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arnav Mohnalkar</title>
+  <title>Projects | Arnav Mohnalkar</title>
   <style>
     body {
       font-family: Georgia, serif;
@@ -31,13 +31,58 @@
       font-weight: bold;
       margin-right: auto;
     }
-    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
-    h2 { font-size: 1.1rem; margin-top: 3rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
-    h3 { font-size: 1rem; margin-bottom: 0.2rem; margin-top: 1.5rem; }
+    /* Project nav */
+    .project-nav {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 1rem 1.25rem;
+      margin-bottom: 3rem;
+      font-size: 0.88rem;
+    }
+    .project-nav p {
+      margin: 0 0 0.5rem;
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .project-nav a {
+      display: block;
+      color: #111;
+      text-decoration: none;
+      padding: 0.2rem 0;
+    }
+    .project-nav a:hover { text-decoration: underline; }
+    .project-nav .divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 0.6rem 0;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 3.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
+    h3 { font-size: 1rem; margin-bottom: 0.2rem; margin-top: 0; }
     p { margin: 0.6rem 0; }
     a { color: #111; }
     .muted { color: #666; font-size: 0.9rem; }
+    .project { margin-bottom: 3rem; }
+    .tags { font-size: 0.8rem; color: #888; margin-bottom: 0.75rem; }
     hr { border: none; border-top: 1px solid #eee; margin: 3rem 0; }
+
+    /* PDF embed */
+    .pdf-embed {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ddd;
+      margin-top: 1rem;
+    }
+    .pdf-fallback {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .pdf-fallback a { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -46,52 +91,93 @@
     <span class="name"><a href="index.html">Arnav Mohnalkar</a></span>
     <a href="index.html">About</a>
     <a href="projects.html">Projects</a>
-    <a href="projects.html#professional">Work</a>
+    <a href="#professional">Work</a>
   </nav>
 
-  <h1>Arnav Mohnalkar</h1>
-  <p class="muted">Computer Science, Georgia Tech &bull; LMC 3403 Portfolio, Spring 2026</p>
+  <h1>Projects</h1>
+  <p class="muted">LMC 3403 assignments and professional work</p>
 
-  <p>
-    Hi, I'm Arnav, a Computer Science student at Georgia Tech with a focus on data engineering and systems. My work sits at the intersection of software development and data infrastructure, where I have built pipelines, deployed machine learning models, and designed tools that real teams use day to day. I enjoy solving problems that require both technical depth and clear communication to stakeholders who may not share the same technical background.
-  </p>
-  <p>
-    Beyond engineering, I care deeply about how information is communicated. Whether I am writing a crisis analysis, building training materials for Bloomberg Terminal, or tailoring a resume for a specific employer, I try to be intentional about audience, clarity, and design. This semester in LMC 3403, I developed a stronger framework for thinking about communication, not just as something that accompanies technical work, but as a skill that makes that work more effective and impactful. This portfolio reflects my growth as a technical communicator across four areas: rhetoric, process, modes and media, and design. I hope it gives you a sense of not just what I have built, but how and why I built it.
-  </p>
+  <!-- Jump nav -->
+  <div class="project-nav">
+    <p>Jump to</p>
+    <a href="#mp1">MP1 &mdash; Career Materials</a>
+    <a href="#mp2">MP2 &mdash; Crisis Report and Infographic</a>
+    <a href="#mp3">MP3 &mdash; Bloomberg Terminal Training</a>
+    <hr class="divider">
+    <a href="#professional">Professional Work</a>
+    <a href="#fraud">Fraud Detection Platform</a>
+    <a href="#snacktrack">SnackTrack Atlanta</a>
+  </div>
 
-  <h2>Self-Assessment Analysis</h2>
+  <h2>Major Projects</h2>
 
-  <h3>Rhetoric</h3>
-  <p>
-    My clearest growth in rhetoric came from learning to tailor communication to a specific audience rather than writing generically. The most concrete example is in my resume from MP1. An early draft included a bullet that read something like "worked on data pipeline optimization." After revision, that same bullet became "engineered data pipelines reducing runtime by 6x and cutting error rates by 40%." The shift from describing a task to communicating measurable impact is a rhetorical choice: it speaks directly to what a technical recruiter values. My cover letter went through a similar revision, moving from a generic opening about my background to a specific paragraph connecting my experience in data infrastructure to Intuit's stated emphasis on combining software engineering with data science.
-  </p>
-  <p>
-    In MP2, I applied rhetorical thinking in a different direction. Rather than crafting persuasive communication myself, I analyzed how Anthropic and the U.S. Department of Defense each framed information during a crisis. A key finding in my report was that "Anthropic's response appears designed to protect the company's reputation while avoiding direct confirmation," which I identified as a deliberate rhetorical strategy of foregrounding ethics while omitting operational specifics. Recognizing these patterns required thinking critically about how word choice, structure, and omission all function as rhetorical tools.
-  </p>
+  <!-- MP1 -->
+  <div class="project" id="mp1">
+    <h3>MP1 &mdash; Career Materials</h3>
+    <p class="tags">Resume &bull; Cover Letter</p>
+    <p>
+      This project required developing a professional resume and cover letter tailored to a specific employer. I applied to Intuit's data engineering team, aligning my language and examples with their emphasis on scale and impact. The most significant revision I made was shifting my resume bullets from task-based descriptions to outcome-driven statements. For example, an early bullet read "worked on data pipeline optimization," which was revised to "engineered data pipelines reducing runtime by 6x and cutting error rates by 40%." That single change made the document more persuasive because it communicates value rather than just activity. The cover letter went through a similar revision, moving from a generic opening to a targeted paragraph explaining why my background specifically fit Intuit's needs.
+    </p>
+    <iframe class="pdf-embed" src="resume.pdf"></iframe>
+    <div class="pdf-fallback">
+      Can't see the PDF? <a href="resume.pdf" target="_blank">Open resume in a new tab</a>
+    </div>
+    <iframe class="pdf-embed" src="cover-letter.pdf" style="margin-top:1rem;"></iframe>
+    <div class="pdf-fallback">
+      Can't see the PDF? <a href="cover-letter.pdf" target="_blank">Open cover letter in a new tab</a>
+    </div>
+  </div>
 
-  <h3>Process</h3>
-  <p>
-    My development in process is best illustrated through specific revision decisions I made across projects. In MP1, my initial resume bullets were task-based: they described what I did rather than what I achieved. After reviewing feedback and considering the audience, I rewrote them to lead with outcomes and quantify impact wherever possible. That single revision made the document significantly more competitive for technical roles.
-  </p>
-  <p>
-    In MP2, my first draft of the crisis report was organized chronologically, summarizing what happened and when. After revision, I restructured it entirely around rhetorical analysis, adding formal sections for executive summary, methods, findings, and implications. This change shifted the document from a timeline into an argument, which is what the assignment actually called for. In MP3, I built the Bloomberg Terminal training materials with a modular structure from the start, specifically so individual sections could be updated without rewriting the whole guide. That was a process decision built into the design of the deliverable itself.
-  </p>
+  <!-- MP2 -->
+  <div class="project" id="mp2">
+    <h3>MP2 &mdash; Technical Crisis Report and Infographic</h3>
+    <p class="tags">Rhetorical Analysis &bull; Visual Communication</p>
+    <p>
+      I examined the use of AI in a military operation, analyzing how Anthropic, the U.S. Department of Defense, and media organizations each framed the event differently. My report examined the rhetorical strategies each party used, including selective disclosure, ethical framing, and strategic silence, to manage public perception. An early draft of the report was organized chronologically, summarizing what happened and when. After revision, I restructured it entirely around rhetorical analysis, adding formal sections for executive summary, methods, findings, and implications. This shifted the document from a timeline into an argument. I then translated the report's key findings into a visual infographic presenting a timeline of events, a stakeholder comparison, and a breakdown of framing strategies for a broader, less technical audience.
+    </p>
+    <iframe class="pdf-embed" src="crisis-report.pdf"></iframe>
+    <div class="pdf-fallback">
+      Can't see the PDF? <a href="crisis-report.pdf" target="_blank">Open report in a new tab</a>
+    </div>
+    <iframe class="pdf-embed" src="infographic.pdf" style="margin-top:1rem;"></iframe>
+    <div class="pdf-fallback">
+      Can't see the PDF? <a href="infographic.pdf" target="_blank">Open infographic in a new tab</a>
+    </div>
+  </div>
 
-  <h3>Modes and Media</h3>
-  <p>
-    In MP2, I produced both a written crisis report and a separate visual infographic covering the same material. The report was structured for a reader who would engage with it closely, while the infographic was designed for someone who needed a quick, visual overview. This meant making deliberate choices about what to cut: the infographic omits the methodological details from the report entirely, and instead foregrounds a stakeholder comparison and a timeline. These are two different rhetorical products serving two different audiences, built from the same underlying research.
-  </p>
-  <p>
-    In MP3, I chose Notion as the platform for my Bloomberg Terminal training materials rather than a Word document or PDF. That choice was itself a media decision. Notion allowed me to create a navigable, modular guide with embedded screenshots and collapsible sections, which functions more like an interactive reference tool than a static document. A new Bloomberg user can jump directly to the section they need rather than reading linearly, which better fits how people actually use training materials.
-  </p>
+  <!-- MP3 -->
+  <div class="project" id="mp3">
+    <h3>MP3 &mdash; Bloomberg Terminal Training Materials</h3>
+    <p class="tags">Instructional Design &bull; Notion</p>
+    <p>
+      I created training materials to help Georgia Tech students learn how to use the Bloomberg Terminal. Most new users find Bloomberg's interface overwhelming because it uses dense financial jargon with little contextual guidance. During revision, I replaced technical terminology like "equity derivative pricing mechanisms" with plain descriptions of what each function does and when a student would actually use it. I also restructured the materials from a linear document into a modular Notion guide with collapsible sections and embedded screenshots, so users can jump directly to the workflow they need rather than reading from the beginning. This revision made the materials more accessible and more practical for the students the guide was designed to serve.
+    </p>
+    <div class="pdf-fallback">
+      This project is hosted on Notion. <a href="https://www.notion.so/Bloomberg-Terminal-Training-Georgia-Tech-343db3a5a85180508f32c4e665526b69" target="_blank">View the Bloomberg Terminal Training Guide</a>
+    </div>
+  </div>
 
-  <h3>Design</h3>
-  <p>
-    My growth in design came from becoming more deliberate about layout, hierarchy, and usability as communication choices rather than aesthetic ones. In my resume, I revised the formatting so that metrics and outcomes appear at the start of each bullet, making the most important information visible in the first few words. This was a deliberate design choice based on how recruiters scan documents: left-to-right, top-to-bottom, spending only a few seconds on a first pass.
-  </p>
-  <p>
-    In my infographic for MP2, I organized information so the reader moves from context (the timeline) to analysis (stakeholder framing) to implication, mirroring the argument structure of the written report. In my Bloomberg training materials, I prioritized accessibility through plain language and numbered steps, removing jargon like "equity derivative pricing mechanisms" and replacing it with plain descriptions of what each function does and when a student would use it. Across all three projects, design decisions were driven by asking how the reader would actually encounter and use the document.
-  </p>
+  <h2 id="professional">Professional Work</h2>
+
+  <!-- Fraud -->
+  <div class="project" id="fraud">
+    <h3>Fraud Detection Platform</h3>
+    <p class="tags">Python &bull; Scikit-learn &bull; Pandas &bull; SQL &bull; Flask/Django</p>
+    <p>
+      I built a full-stack AI-powered analytics platform for the Georgia Tech Student Government Association to detect anomalous fund disbursements across student organizations. I developed and deployed machine learning pipelines that modeled historical spending patterns and surfaced outliers and potential fraud signals in reimbursement data. The platform gave SGA leadership a data-driven tool to improve financial oversight. The system had to be not just accurate, but interpretable and actionable for administrators who are not data scientists, demonstrating that a tool's value depends on how clearly its outputs are communicated to the people using it.
+    </p>
+    <img src="jfdc.png" alt="JFDC Analytics Dashboard screenshot" style="width:100%; border: 1px solid #ddd; margin-top: 0.75rem;">
+  </div>
+
+  <!-- SnackTrack -->
+  <div class="project" id="snacktrack">
+    <h3>SnackTrack Atlanta</h3>
+    <p class="tags">Django &bull; JavaScript &bull; Google Maps API</p>
+    <p>
+      SnackTrack Atlanta is a full-stack web application I built to help users discover nearby restaurants through live map integration and interactive search functionality. I developed both the back-end logic and a responsive front-end designed for seamless use across devices, integrating geolocation and dynamic search filters. Building SnackTrack pushed me to think about user experience as a form of communication: every design decision, from filter placement to map responsiveness, shapes how a user understands and interacts with the information being presented.
+    </p>
+    <img src="food_finder.png" alt="SnackTrack Atlanta app screenshot" style="width:100%; border: 1px solid #ddd; margin-top: 0.75rem;">
+  </div>
 
   <hr>
   <p class="muted">Arnav Mohnalkar &bull; Georgia Institute of Technology &bull; Spring 2026</p>
